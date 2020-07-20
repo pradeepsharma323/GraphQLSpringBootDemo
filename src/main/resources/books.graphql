@@ -1,0 +1,18 @@
+schema {
+ query: Query
+}
+
+type Query {
+ allBooks: [Book]
+ book(id: Int): Book
+ deleteById(id: Int): Book
+ updateBook(id: Int, authors: String): Book
+}
+
+type Book {
+  id: Int
+  title: String
+  publisher: String
+  authors: String
+  publishedDate: String
+}
